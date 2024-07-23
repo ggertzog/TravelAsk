@@ -59,23 +59,29 @@ const useChat = () => {
     };
 
     if (chat === 'admin') {
+
       setChatWithAdmin((prevChat) => ({
         messages: [...prevChat.messages, newMessage],
         newMessage: '',
       }));
+
       setChatWithUser((prevChat) => ({
         messages: [...prevChat.messages, newMessage],
         newMessage: '',
       }));
+
     } else {
+
       setChatWithUser((prevChat) => ({
         messages: [...prevChat.messages, newMessage],
         newMessage: '',
       }));
+
       setChatWithAdmin((prevChat) => ({
         messages: [...prevChat.messages, newMessage],
         newMessage: '',
       }));
+      
     }
   };
 
