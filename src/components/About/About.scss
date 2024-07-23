@@ -1,0 +1,50 @@
+@import '@/index';
+
+.about {
+    display: flex;
+    max-width: 879px;
+
+    &__image {
+        width: 440px;
+        height: 440px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__container {
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: $font-stack;
+        @extend %title-txt;
+        margin-bottom: 18px;
+    }
+
+    &__text {
+        font-family: $font-stack;
+        @extend %about-txt;
+        margin-bottom: 5px;
+        padding: 0;
+    }
+
+    &__link {
+        padding: 0;
+        max-width: 114px;
+        font-family: $font-stack;
+        @extend %about-txt;
+        font-weight: 500;
+        border-bottom: 3px solid #FF4641;
+        cursor: pointer;
+        transition: .2s ease-in;
+    
+        &:hover {
+            border-bottom: 3px solid transparent;
+            color: #FF4641;
+        }
+    }
+}

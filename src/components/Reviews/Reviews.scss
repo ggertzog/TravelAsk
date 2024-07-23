@@ -1,0 +1,74 @@
+@import '@/index';
+
+.reviews {
+    width: 100%;
+    background-color: #fff;
+    padding: 35px 30px;
+
+    &__title {
+        margin-bottom: 21px;
+        font-family: $font-stack;
+        @extend %title-txt;
+    
+    }
+
+    &__box {
+        position: relative;
+    }
+
+    &__button {
+        margin-top: 29px;
+        padding: 10px 24px;
+        color: #212121;
+        font-family: $font-stack;
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 500;
+        background-color: transparent;
+        border: 2px solid #FF4641;
+        cursor: pointer;
+        opacity: 1;
+        transition: .3s opacity ease-in;
+    
+        &:hover {
+            opacity: .7;
+        }
+    }
+    
+
+}
+
+.swiper-slide {
+    width: 300px !important;
+    margin-right: 20px !important;
+    
+    .swiper-slide:last-of-type {
+        margin-right: 0 !important;
+    }
+}
+
+.swiper-pagination {
+    margin: 0;
+    padding: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98px !important;
+    right: 0px !important;
+    bottom: 14px !important;
+    left: auto !important;
+
+    .swiper-pagination-bullet {
+        margin: auto;
+        width: 4px;
+        height: 4px;
+        background-color: #212121;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 8px;
+        height: 8px;
+        background-color: #FF4641;
+    }
+}
