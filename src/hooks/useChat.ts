@@ -36,7 +36,8 @@ const useChat = () => {
         date: 'Вчера в 18:45', 
         sender: 'user' 
       },
-    ];;
+    ];
+
     setChatWithAdmin({ messages: initialMessages, newMessage: '' });
     setChatWithUser({ messages: initialMessages, newMessage: '' });
   }, []);
