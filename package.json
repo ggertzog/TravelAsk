@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predelpoy": "npm run build",
+    "predelpoy": "vite build",
     "deploy": "gh-pages -d build",
     "dev": "vite --port 3000 && open http://localhost:3000",
     "build": "tsc -b && vite build",
@@ -15,9 +15,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-slick": "^0.30.2",
     "sass": "^1.77.8",
-    "slick-carousel": "^1.8.1",
     "swiper": "^11.1.5"
   },
   "devDependencies": {
