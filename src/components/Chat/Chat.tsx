@@ -23,7 +23,7 @@ interface ChatProps {
 const Chat: React.FC<ChatProps> = ({title, user, disc, chatState, onNewMessageChange, onSendMessage, currentUser}) => {
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' && chatState.newMessage.trim() !== '') {
           onSendMessage(chatState.newMessage);
         }
     };
@@ -70,9 +70,15 @@ const Chat: React.FC<ChatProps> = ({title, user, disc, chatState, onNewMessageCh
                     onChange={(e) => onNewMessageChange(e.target.value)}
                     value={chatState.newMessage}
                     onKeyDown={handleKeyDown}
+                    minLength={1}
+                    required
                 />
                 <button className='chat__submit-button'
-                    onClick={() => onSendMessage(chatState.newMessage)}
+                    onClick={() => {
+                        if (chatState.newMessage.trim() !== '') {
+                            onSendMessage(chatState.newMessage);
+                        }
+                    }}
                 >
                     <img className='chat__button-icon' src={send} />
                 </button>
